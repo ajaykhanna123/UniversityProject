@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoticeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <android.support.v7.widget.CardView
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#1de9b6"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                tools:targetApi="lollipop"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@mipmap/university_icon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:gravity="center"
+                        android:text="@string/collegeNotice"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundbutton"
+                        android:text="College"
+                        android:textColor="#ffffff"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="18sp"
+                        android:id="@+id/btnCollegeNotice"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#ff5252"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                tools:targetApi="lollipop"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:gravity="center"
+                        android:src="@mipmap/academics_icon"
+
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundbutton"
+                        android:text="Acadmics"
+                        android:textColor="#ffffff"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="18sp"
+                        android:id="@+id/compsexplore"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#0d47a1"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                tools:targetApi="lollipop"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:gravity="center"
+                        android:src="@mipmap/workshops_icon"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundbutton"
+                        android:text="Workshops"
+                        android:textColor="#ffffff"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="18sp"
+                        android:id="@+id/civilexplore"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#ffd600"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                tools:targetApi="lollipop"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:gravity="center"
+                        android:src="@mipmap/daily_notice_icon"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundbutton"
+                        android:text="Activities"
+                        android:textColor="#ffffff"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="18sp"
+                        android:id="@+id/autoexplore"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:id="@+id/floatAddNotice"
+            android:src="@drawable/ic_add_white_24dp"/>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">University Project</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">"Open"</string>
+    <string name="close">"Close"</string>
+    <string name="mech">Mechanical</string>
+    <string name="explore">Explore</string>
+    <string name="electronics">Electronics</string>
+    <string name="comps">Computer</string>
+    <string name="civil">Civil</string>
+
+    <string name="office">CGPA Caculator</string>
+
+    <string name="fy">First Year</string>
+    <string name="collegeNotice">College Notice</string>
+</resources>

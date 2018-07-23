@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark_blue">#1e4eff</color>
+    <color name="normal">#1976D2</color>
+    <color name="hovered">#1A237E</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="editTextBG">#DADADA</color>
+    <color name="textColor">#6e6e6e</color>
+    <color name="textHighligtRed">#ea1d1a</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="buttonDisabledColor">#d6f3f3</color>
+    <color name="gray">#6bb3c8</color>
+</resources>
