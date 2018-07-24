@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject;
+package com.example.ajaykhanna.universityproject.Forum;
 
 import android.content.Context;
 import android.net.Uri;

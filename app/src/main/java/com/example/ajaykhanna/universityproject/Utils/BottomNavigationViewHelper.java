@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject;
+package com.example.ajaykhanna.universityproject.Utils;
 
 import android.annotation.SuppressLint;
 import android.support.design.internal.BottomNavigationItemView;

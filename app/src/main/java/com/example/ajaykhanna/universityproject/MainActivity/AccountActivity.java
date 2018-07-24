@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject;
+package com.example.ajaykhanna.universityproject.MainActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -22,10 +22,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.ajaykhanna.universityproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

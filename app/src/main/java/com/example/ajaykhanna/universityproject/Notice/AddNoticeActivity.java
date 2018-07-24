@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject;
+package com.example.ajaykhanna.universityproject.Notice;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.ajaykhanna.universityproject.R;
 
 public class AddNoticeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 

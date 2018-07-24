@@ -1,8 +1,10 @@
-package com.example.ajaykhanna.universityproject;
+package com.example.ajaykhanna.universityproject.Login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import com.example.ajaykhanna.universityproject.R;
 
 public class OtpActivity extends AppCompatActivity {
     private Toolbar mToolbar;

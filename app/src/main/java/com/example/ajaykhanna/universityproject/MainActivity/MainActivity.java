@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject;
+package com.example.ajaykhanna.universityproject.MainActivity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -11,9 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
 
+import com.example.ajaykhanna.universityproject.Forum.DiscussionFragment;
+import com.example.ajaykhanna.universityproject.Login.LoginActivity;
+import com.example.ajaykhanna.universityproject.Notice.NoticeFragment;
+import com.example.ajaykhanna.universityproject.Notification.NotificationFragment;
+import com.example.ajaykhanna.universityproject.R;
+import com.example.ajaykhanna.universityproject.Study.StudyFragment;
+import com.example.ajaykhanna.universityproject.Teacher.TeacherFragment;
+import com.example.ajaykhanna.universityproject.Utils.BottomNavigationViewHelper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
