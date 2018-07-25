@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject.MainActivity;
+package com.example.ajaykhanna.universityproject.Mainpage;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;

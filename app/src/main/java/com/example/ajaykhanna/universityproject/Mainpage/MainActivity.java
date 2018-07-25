@@ -1,4 +1,4 @@
-package com.example.ajaykhanna.universityproject.MainActivity;
+package com.example.ajaykhanna.universityproject.Mainpage;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;

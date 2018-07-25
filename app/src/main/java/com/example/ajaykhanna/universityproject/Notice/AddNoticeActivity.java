@@ -26,7 +26,7 @@ public class AddNoticeActivity extends AppCompatActivity implements AdapterView.
         getSupportActionBar().setTitle("Add Notice");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        edtCategorySpinner=findViewById(R.id.addCategory);
+        //edtCategorySpinner=findViewById(R.id.addCategory);
 
 
 
