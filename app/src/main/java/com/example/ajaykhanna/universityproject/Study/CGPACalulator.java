@@ -6,16 +6,17 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.ajaykhanna.universityproject.R;
 
-public class CseStudyActivity extends AppCompatActivity {
+public class CGPACalulator extends AppCompatActivity {
     private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cse_study);
-        mToolbar=findViewById(R.id.cseAppBar);
+        setContentView(R.layout.activity_cgpacalulator);
+
+        mToolbar=findViewById(R.id.cgpaAppBar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Computer Science");
+        getSupportActionBar().setTitle("CGPA Calculator");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

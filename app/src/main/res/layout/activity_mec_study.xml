@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Study.MecStudyActivity">
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/mecAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></include>
+
 </android.support.constraint.ConstraintLayout>

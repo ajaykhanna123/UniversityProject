@@ -6,16 +6,18 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.ajaykhanna.universityproject.R;
 
-public class CseStudyActivity extends AppCompatActivity {
+public class IstYearStudy extends AppCompatActivity {
+
     private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cse_study);
-        mToolbar=findViewById(R.id.cseAppBar);
+        setContentView(R.layout.activity_ist_year_study);
+
+        mToolbar=findViewById(R.id.istYearAppBar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Computer Science");
+        getSupportActionBar().setTitle("Ist year");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
