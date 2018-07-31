@@ -6,7 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.ajaykhanna.universityproject.Forum.DiscussionYourGrpFragment;
+import com.example.ajaykhanna.universityproject.Forum.DiscussionJoinGroupFragment;
+import com.example.ajaykhanna.universityproject.Forum.DiscussionYourGroupFragment;
 import com.example.ajaykhanna.universityproject.Forum.models.ChatGroupModel;
 
 import java.util.ArrayList;
@@ -17,12 +18,14 @@ import java.util.ArrayList;
 public class DiscussionViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private String[] titleList = {"Your Groups", "Join Groups"};
-    ArrayList<ChatGroupModel> chatGroupModels;
-    ArrayList<Fragment> fragments = new ArrayList<>();
+    private ArrayList<ChatGroupModel> yourChatGroupModels;
+    private ArrayList<ChatGroupModel> joinChatGroupModels;
 
-    public DiscussionViewPagerAdapter(FragmentManager fm, ArrayList<ChatGroupModel> chatGroupModels) {
+    public DiscussionViewPagerAdapter(FragmentManager fm, ArrayList<ChatGroupModel> yourChatGroupModels,
+                                      ArrayList<ChatGroupModel> joinChatGroupModels) {
         super(fm);
-        this.chatGroupModels = chatGroupModels;
+        this.yourChatGroupModels = yourChatGroupModels;
+        this.joinChatGroupModels = joinChatGroupModels;
     }
 
     @Override
@@ -33,11 +36,16 @@ public class DiscussionViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Bundle fragmentArguments = new Bundle();
-        fragmentArguments.putParcelableArrayList("chatGrpModels", chatGroupModels);
+        fragmentArguments.putParcelableArrayList("yourChatGroupModels", yourChatGroupModels);
+        fragmentArguments.putParcelableArrayList("joinChatGroupModels", joinChatGroupModels);
         switch (position) {
-            case 0 : DiscussionYourGrpFragment discussionYourGrpFragment =  new DiscussionYourGrpFragment();
-                discussionYourGrpFragment.setArguments(fragmentArguments);
-                return discussionYourGrpFragment;
+            case 0 : DiscussionYourGroupFragment discussionYourGroupFragment =  new DiscussionYourGroupFragment();
+                discussionYourGroupFragment.setArguments(fragmentArguments);
+                return discussionYourGroupFragment;
+            case 1:
+                DiscussionJoinGroupFragment discussionJoinGroupFragment = new DiscussionJoinGroupFragment();
+                discussionJoinGroupFragment.setArguments(fragmentArguments);
+                return discussionJoinGroupFragment;
         }
         return new Fragment();
     }
@@ -46,9 +54,5 @@ public class DiscussionViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         return titleList[position];
-    }
-
-    public void clearAll() {
-
     }
 }

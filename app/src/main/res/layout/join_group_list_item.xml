@@ -6,16 +6,14 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/yourGrpNameTxt"
+        android:id="@+id/joinGrpNameTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat"
         android:singleLine="true"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/yourGrpUnreadIndicatorImg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Java" />
@@ -26,30 +24,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat"
-        android:text="Members: "
+        android:text="Admin: "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yourGrpNameTxt" />
-
-    <ImageView
-        android:id="@+id/yourGrpUnreadIndicatorImg"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_red_dot" />
+        app:layout_constraintTop_toBottomOf="@+id/joinGrpNameTxt" />
 
     <TextView
-        android:id="@+id/yourGrpAdminTxt"
+        android:id="@+id/joinGrpAdminTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
         android:singleLine="true"
-        app:layout_constraintEnd_toStartOf="@+id/yourGrpUnreadIndicatorImg"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/yourGrpNameTxt"
-        tools:text="11501070, 11501085" />
+        app:layout_constraintTop_toBottomOf="@+id/joinGrpNameTxt"
+        tools:text="11501070" />
 
     <View
         android:id="@+id/view2"
@@ -60,6 +47,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yourGrpAdminTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/joinGrpAdminTxt" />
 
+    <Button
+        android:id="@+id/joinGrpBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="Join"
+        android:textColor="@color/textHighligtRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

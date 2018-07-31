@@ -24,8 +24,8 @@ import java.util.ArrayList;
  */
 public class YourGrpListAdapter extends RecyclerView.Adapter<YourGrpListAdapter.ViewHolder> {
 
-    ArrayList<ChatGroupModel> chatGroupModels;
-    Context context;
+    private ArrayList<ChatGroupModel> chatGroupModels;
+    private Context context;
 
     public YourGrpListAdapter( Context context, ArrayList<ChatGroupModel> chatGroupModels) {
         this.chatGroupModels = chatGroupModels;
@@ -55,9 +55,9 @@ public class YourGrpListAdapter extends RecyclerView.Adapter<YourGrpListAdapter.
          TextView yourGrpMemberTxt;
          ImageView yourGrpUnreadIndicatorImg;
 
-         public ViewHolder(View itemView) {
+         ViewHolder(View itemView) {
              super(itemView);
-             yourGrpMemberTxt = itemView.findViewById(R.id.yourGrpMemberTxt);
+             yourGrpMemberTxt = itemView.findViewById(R.id.yourGrpAdminTxt);
              yourGrpNameTxt = itemView.findViewById(R.id.yourGrpNameTxt);
              yourGrpUnreadIndicatorImg = itemView.findViewById(R.id.yourGrpUnreadIndicatorImg);
          }
@@ -72,27 +72,31 @@ public class YourGrpListAdapter extends RecyclerView.Adapter<YourGrpListAdapter.
                  }
              }
              yourGrpMemberTxt.setText(membersTxt);
-             for(ChatModel chat: chatGroupModel.getChats()) {
-                 if (!chat.getRead_by().contains(DiscussionFragment.currentUserRollNo)) {
-                     yourGrpUnreadIndicatorImg.setVisibility(View.VISIBLE);
-                     yourGrpNameTxt.setTypeface(Typeface.DEFAULT_BOLD);
-                     yourGrpMemberTxt.setTypeface(Typeface.DEFAULT_BOLD);
-                 } else {
-                     yourGrpUnreadIndicatorImg.setVisibility(View.GONE);
-                     yourGrpNameTxt.setTypeface(Typeface.DEFAULT);
-                     yourGrpMemberTxt.setTypeface(Typeface.DEFAULT);
+             if(chatGroupModel.getChats() != null) {
+                 for (ChatModel chat : chatGroupModel.getChats()) {
+                     if (!chat.getRead_by().contains(DiscussionFragment.currentUserRollNo)) {
+                         yourGrpUnreadIndicatorImg.setVisibility(View.VISIBLE);
+                         yourGrpNameTxt.setTypeface(Typeface.DEFAULT_BOLD);
+                         yourGrpMemberTxt.setTypeface(Typeface.DEFAULT_BOLD);
+                     } else {
+                         yourGrpUnreadIndicatorImg.setVisibility(View.GONE);
+                         yourGrpNameTxt.setTypeface(Typeface.DEFAULT);
+                         yourGrpMemberTxt.setTypeface(Typeface.DEFAULT);
+                     }
                  }
              }
              itemView.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View v) {
-                     for(ChatModel chat: chatGroupModel.getChats()) {
-                         if(!chat.getRead_by().contains(DiscussionFragment.currentUserRollNo)) {
-                             chat.getRead_by().add(DiscussionFragment.currentUserRollNo);
+                     if(chatGroupModel.getChats() != null) {
+                         for (ChatModel chat : chatGroupModel.getChats()) {
+                             if (!chat.getRead_by().contains(DiscussionFragment.currentUserRollNo)) {
+                                 chat.getRead_by().add(DiscussionFragment.currentUserRollNo);
+                             }
+                             FirebaseDatabase.getInstance().getReference(Constants.KEY_CHAT_GROUPS)
+                                     .child(chatGroupModel.getId())
+                                     .setValue(chatGroupModel);
                          }
-                         FirebaseDatabase.getInstance().getReference(Constants.KEY_CHAT_GROUPS)
-                                 .child(chatGroupModel.getId())
-                                 .setValue(chatGroupModel);
                      }
                  }
              });

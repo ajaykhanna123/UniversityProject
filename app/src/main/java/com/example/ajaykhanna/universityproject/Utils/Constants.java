@@ -6,4 +6,5 @@ package com.example.ajaykhanna.universityproject.Utils;
 public class Constants {
 
     public static final String KEY_CHAT_GROUPS = "chat_groups";
+    public static final String KEY_PENDING_REQUESTS = "pending_requests";
 }
