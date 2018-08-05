@@ -37,18 +37,25 @@
         <activity
             android:name=".Notice.AddNoticeActivity"
             android:parentActivityName=".Mainpage.MainActivity" />
-        <activity android:name=".Study.ElectronicsStudyActivity"
-            android:parentActivityName=".Mainpage.MainActivity"/>
-        <activity android:name=".Study.CseStudyActivity"
-            android:parentActivityName=".Mainpage.MainActivity"/>
-        <activity android:name=".Study.MecStudyActivity"
-            android:parentActivityName=".Mainpage.MainActivity"/>
-        <activity android:name=".Study.CivilStudyActivity"
-            android:parentActivityName=".Mainpage.MainActivity"/>
-        <activity android:name=".Study.IstYearStudy"
-            android:parentActivityName=".Mainpage.MainActivity"/>
-        <activity android:name=".Study.CGPACalulator"
-            android:parentActivityName=".Mainpage.MainActivity"></activity>
+        <activity
+            android:name=".Study.ElectronicsStudyActivity"
+            android:parentActivityName=".Mainpage.MainActivity" />
+        <activity
+            android:name=".Study.CseStudyActivity"
+            android:parentActivityName=".Mainpage.MainActivity" />
+        <activity
+            android:name=".Study.MecStudyActivity"
+            android:parentActivityName=".Mainpage.MainActivity" />
+        <activity
+            android:name=".Study.CivilStudyActivity"
+            android:parentActivityName=".Mainpage.MainActivity" />
+        <activity
+            android:name=".Study.IstYearStudy"
+            android:parentActivityName=".Mainpage.MainActivity" />
+        <activity
+            android:name=".Study.CGPACalulator"
+            android:parentActivityName=".Mainpage.MainActivity" />
+        <activity android:name=".Forum.DiscussionChatActivity"></activity>
     </application>
 
 </manifest>

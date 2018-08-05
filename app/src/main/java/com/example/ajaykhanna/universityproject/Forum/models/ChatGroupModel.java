@@ -20,15 +20,39 @@ public class ChatGroupModel implements Parcelable {
     public ChatGroupModel() {
     }
 
-    public ChatGroupModel(long admin, ArrayList<ChatModel> chats, ArrayList<Long> members, ArrayList<Long> pending_requests) {
+    public ChatGroupModel(long admin, String name, ArrayList<ChatModel> chats, ArrayList<Long> members, ArrayList<Long> pending_requests, String id) {
         this.admin = admin;
+        this.name = name;
         this.chats = chats;
         this.members = members;
         this.pending_requests = pending_requests;
+        this.id = id;
     }
 
     protected ChatGroupModel(Parcel in) {
         admin = in.readLong();
+        name = in.readString();
+        chats = in.createTypedArrayList(ChatModel.CREATOR);
+        id = in.readString();
+        members = new ArrayList<>();
+        pending_requests = new ArrayList<>();
+        in.readList(members, Long.class.getClassLoader());
+        in.readList(pending_requests, Long.class.getClassLoader());
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(admin);
+        dest.writeString(name);
+        dest.writeTypedList(chats);
+        dest.writeString(id);
+        dest.writeList(members);
+        dest.writeList(pending_requests);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<ChatGroupModel> CREATOR = new Creator<ChatGroupModel>() {
@@ -89,15 +113,5 @@ public class ChatGroupModel implements Parcelable {
 
     public void setPending_requests(ArrayList<Long> pending_requests) {
         this.pending_requests = pending_requests;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeLong(admin);
     }
 }

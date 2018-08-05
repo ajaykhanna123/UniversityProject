@@ -1,6 +1,8 @@
 package com.example.ajaykhanna.universityproject.Forum.adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ajaykhanna.universityproject.Forum.DiscussionChatActivity;
 import com.example.ajaykhanna.universityproject.Forum.DiscussionFragment;
 import com.example.ajaykhanna.universityproject.Forum.models.ChatGroupModel;
 import com.example.ajaykhanna.universityproject.Forum.models.ChatModel;
@@ -98,6 +101,9 @@ public class YourGrpListAdapter extends RecyclerView.Adapter<YourGrpListAdapter.
                                      .setValue(chatGroupModel);
                          }
                      }
+                     Intent chatIntent = new Intent(context, DiscussionChatActivity.class);
+                     chatIntent.putExtra(Constants.KEY_CHAT_GROUP_EXTRA, chatGroupModel);
+                     context.startActivity(chatIntent);
                  }
              });
          }
